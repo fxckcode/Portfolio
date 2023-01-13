@@ -1,0 +1,72 @@
+{
+    "title": "Diego Duran",
+    "description": "I'm 17 years old, I like to program in my free time, read and philosophize a little about life, my goals is to be a recognized programmer and to be able to support my parents and family economically, also, to buy the things I once dreamed of and why not... To create a company.",
+    "skills": [
+        {
+            "name": "JavaScript",
+            "progress": "70%"
+        },
+        {
+            "name": "PHP",
+            "progress": "50%"
+        },      
+        {
+            "name": "BASH",
+            "progress": "80%"
+        },       
+        {
+            "name": "PYTHON",
+            "progress": "90%"
+        },
+        {
+            "name": "HTML",
+            "progress": "100%"
+        },
+        {
+            "name": "CSS3",
+            "progress": "85%"
+        }
+    ],
+    "experience": [
+        {
+            "title": "Mision Tic",
+            "age": "2022",
+            "time": "1 Year",
+            "course": "FullStack Course",
+            "color": "#ee2469"
+        },
+        {
+            "title": "SENA",
+            "age": "2022",
+            "time": "2 Years",
+            "course": "Systems Technician",
+            "color": "#00af00"
+        },
+        {
+            "title": "SENA",
+            "age": "2023",
+            "time": "1.5 Year",
+            "course": "Software Analysis and Development Technologist",
+            "color": "#00af00"
+        },
+        {
+            "title": "Accounting Software | Classified",
+            "age": "2022 - 2023",
+            "time": "3 Months",
+            "course": "Bootcamp FullStack",
+            "color": "#ff6600"
+        }
+    ],
+    "study": [
+        {
+            "name": "Platzi",
+            "courses": "React, PHP, English and Productivity",
+            "color": "#97c93e"
+        },
+        {
+            "name": "Youtube",
+            "courses": "AstroJS, NextJS, Figma, UI and UX Desing",
+            "color": "#ff0000"
+        }
+    ]
+}

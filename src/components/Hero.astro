@@ -1,0 +1,80 @@
+---
+interface Props {
+    title: string;
+    description: string;
+}
+const {title, description} = Astro.props;
+import hero from '../configs/hero.json';
+const subTitle = "text-[25px] md:text-[35px]";
+---
+
+<div class="md:w-[50%] w-[80%] absolute z-10 top-[30%] left-[10%] md:left-[25%] contain flex flex-col gap-y-5">
+    <div class="flex md:flex-row flex-col md:gap-x-10 title items-center">
+        <img src="icon.jpg" alt="" class="w-[60%] md:w-auto">
+        <h1 class="md:text-[70px] text-[30px] md:text-inherit text-center relative md:top-[50px]">{title}</h1>
+    </div>
+    <div class="flex description text-left">
+        <p class="text-[14px] md:text-[18px]">{description}</p>
+    </div>
+    <div>
+        <h2 class={subTitle}>Skills ⛈️</h2>
+        <ul class="px-5">
+            {
+                hero.skills.map(skill => (
+                    <li class={`${skill.name.toLowerCase()} md:text-[18px] text-[16px]`}>• {skill.name} - {skill.progress}</li>
+                ))
+            }
+        </ul>
+    </div>
+    <div>
+        <h2 class={subTitle}>Experience 🧠</h2>
+        <ul class="px-5">
+            {
+                hero.experience.map(exp => (
+                    <li class="pb-5 md:text-[18px] text-[16px]" style={`color: ${exp.color};`}>
+                        <h3>• {exp.title}, {exp.age}</h3>
+                        <p class="px-6">- {exp.course}, {exp.time}</p>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+    <div>
+        <h2 class={subTitle}>I'm currently studying 📕</h2>
+        <ul class="px-5">
+            {
+                hero.study.map(std => (
+                    <li class="pb-5 md:text-[18px] text-[16px]" style={`color:${std.color};`}>
+                        <h3>• Platform: {std.name}</h3>
+                        <p class="px-6">- {std.courses}</p>    
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</div>
+
+<style lang="scss">
+    .contain {
+        .title {
+            img {
+                filter: drop-shadow(15px 15px 20px rgba(0, 0, 0, 0.25));
+            }
+        }
+    }
+    .javascript {
+        color: #f7df1e;
+    }
+    .php {
+        color: #8993be;
+    }
+    .python {
+        color: #0eac52;
+    }
+    .html {
+        color: #e34e26;
+    }
+    .css3 {
+        color: #3799d6;
+    }
+</style>

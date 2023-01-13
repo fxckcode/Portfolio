@@ -1,0 +1,17 @@
+[
+    {
+        "title": "My Dotfiles",
+        "description": "Two great Windows Tiling Managers together (Qtile and Bspwm), in this dotfile I expose two great environments and how to install it quickly",
+        "link": "https://github.com/fxckcode/my-dotfiles" 
+    },
+    {
+        "title": "My First Portfolio",
+        "description": "First portfolio created by me, technologies: HTML and CSS [vanilla]",
+        "link": "https://github.com/fxckcode/First-Portfolio"
+    },
+    {
+        "title": "My first portfolio created with AstroJS",
+        "description": "Portfolio created with AstroJS in order to practice this new technology that generates static sites without JavaScript",
+        "link": "https://github.com/fxckcode/myPortfolio"
+    }
+]

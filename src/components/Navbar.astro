@@ -1,0 +1,33 @@
+---
+interface Props {
+    active: boolean
+}
+import navlinks from "../configs/navlinks.json";
+const {active} = Astro.props;
+---
+
+<nav class="flex justify-around py-4 backdrop-blur-md nav text-center z-20">
+    <div>
+        <a href={navlinks[0].link}>FxckCode |</a>
+        <a href={navlinks[1].link} class={`${active == true ? "active" : " "} button`}> {navlinks[1].name}</a>
+    </div>
+</nav>
+
+<style lang="scss">
+    .nav {
+        position: fixed; 
+        width: 100%;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+    .button {
+        &:hover {
+            transition: 1s all;
+            border-bottom: 1px solid white;
+        }
+    }
+    .active {
+        border-bottom: 1px solid white;
+    }
+</style>
