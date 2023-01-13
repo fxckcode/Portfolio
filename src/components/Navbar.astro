@@ -6,7 +6,7 @@ import navlinks from "../configs/navlinks.json";
 const {active} = Astro.props;
 ---
 
-<nav class="flex justify-around py-4 backdrop-blur-md nav text-center z-20">
+<nav class="flex justify-around py-4 backdrop-blur-md nav text-center z-20 md:text-[20px] text-[16px]">
     <div>
         <a href={navlinks[0].link}>FxckCode |</a>
         <a href={navlinks[1].link} class={`${active == true ? "active" : " "} button`}> {navlinks[1].name}</a>
