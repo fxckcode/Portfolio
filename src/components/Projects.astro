@@ -5,20 +5,28 @@ interface Props {
 const {title} = Astro.props;
 import Card from './subComponents/Card.astro';
 import projects from '../configs/projects.json';
+import Media from './subComponents/Media.astro';
 ---
 
-<div class="md:w-[70%] w-[80%] absolute z-10 top-[30%] left-[10%] md:left-[15%] lg:left-[20%] contain flex flex-col sm:gap-y-1 gap-y-5">
+<div class="md:w-[70%] w-[80%] absolute z-10 top-[30%] left-[10%] md:left-[15%] lg:left-[15%] contain flex flex-col sm:gap-y-1 gap-y-5">
     <div class="flex md:flex-row flex-col md:gap-x-10 title items-center">
         <img src="icon.webp" alt="" class="w-[60%] md:w-auto sm:w-auto" width="255" height="255" alt="avatar icon">
-        <h1 class="md:text-[40px] sm:text-[35px] text-[30px] lg:text-[50px] md:text-left text-center relative md:top-[50px]">{title}</h1>
+        <h1 class="md:text-[40px] sm:text-[35px] text-[30px] lg:text-[35px] md:text-left text-center relative md:top-[50px]">{title}</h1>
     </div>
-    <div>
-        {
-            projects.map(project => (
-                <Card title={project.title} description={project.description} link={project.link}/>
-            ))
-        }
-        
+    <div class="flex flex-col md:flex-col lg:flex-row gap-x-5">
+        <div class="lg:w-[50%]">
+            {
+                projects.map(project => (
+                    <Card title={project.title} description={project.description} link={project.link}/>
+                ))
+            }
+        </div>
+        <div class="lg:w-[50%] h-[100%]">
+            <h2 class="text-center text-2xl my-6 border-dashed border">Contact Me</h2>
+            <div class="flex flex-col gap-y-10">
+                <Media />
+            </div>
+        </div>
     </div>
 </div>
 

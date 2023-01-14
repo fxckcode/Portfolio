@@ -7,8 +7,9 @@ const {active} = Astro.props;
 ---
 
 <nav class="flex justify-around py-4 backdrop-blur-md nav text-center z-20 md:text-[20px] text-[16px]">
-    <div>
-        <a href={navlinks[0].link}>FxckCode |</a>
+    <div class="flex gap-x-1">
+        <a href={navlinks[0].link}>FxckCode</a>
+        <p>|</p>
         <a href={navlinks[1].link} class={`${active == true ? "active" : " "} button`}> {navlinks[1].name}</a>
     </div>
 </nav>
