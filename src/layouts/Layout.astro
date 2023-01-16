@@ -10,7 +10,7 @@ import './Layout.css';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -23,10 +23,10 @@ import './Layout.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-primary text-white text-[12px] md:text-[20px]">
+	<body class="bg-primary text-white text-[12px] md:text-[20px] min-h-[100%]">
 		<Navbar active={active}/>
 		<div class="w-screen m-auto shadow">
-			<img src="cover.webp" alt="cover image or bg" width="8000" height="5306">
+			<img src="cover.webp" alt="cover image or bg" width="8000" height="5306" class="block object-cover w-[100%] h-[40vh] absolute">
 		</div>
 		<slot />
 	</body>
@@ -34,18 +34,9 @@ import './Layout.css';
 <style lang="scss">
 	body {
 		font-family: 'JetBrains Mono';
-		min-height: 100%;
-	}
-	html {
-		scroll-behavior: smooth;
 	}
 	img {
-		display: block;
-		object-fit: cover;
-		width: 100%;
-		height: 40vh;
 		object-position: center 50%;
-		position: absolute;
 		z-index: -1;
 	}
 </style>

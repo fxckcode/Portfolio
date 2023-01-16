@@ -6,7 +6,7 @@ import navlinks from "../configs/navlinks.json";
 const {active} = Astro.props;
 ---
 
-<nav class="flex justify-around py-4 backdrop-blur-md nav text-center z-20 md:text-[20px] text-[16px]">
+<nav class="flex justify-around py-4 backdrop-blur-md nav text-center z-20 md:text-[20px] text-[16px] fixed w-[100%] m-auto left-0 right-0">
     <div class="flex gap-x-1">
         <a href={navlinks[0].link}>FxckCode</a>
         <p>|</p>
@@ -15,13 +15,6 @@ const {active} = Astro.props;
 </nav>
 
 <style lang="scss">
-    .nav {
-        position: fixed; 
-        width: 100%;
-        margin: auto;
-        left: 0;
-        right: 0;
-    }
     .button {
         &:hover {
             transition: 1s all;
